@@ -40,7 +40,7 @@ export default function ContactPage() {
           </div>
           
           <p className="text-center text-gray-400 mt-8">
-            Or call directly: <a href="tel:+1234567890" className="text-cyan-400 hover:text-cyan-300">+1 (234) 567-890</a>
+            Or call directly: <a href="tel:+1234567890" className="text-cyan-400 hover:text-cyan-300">+1( (234) 567-890)</a>
           </p>
         </div>
       </div>
