@@ -1,0 +1,91 @@
+'use client';
+
+import Link from 'next/link';
+import { ConsciousPage } from '../consciousness-engine';
+import { Brain, Zap, Shield, Code, Beaker, ArrowRight } from 'lucide-react';
+
+export default function ServicesPage() {
+  const services = [
+    {
+      title: 'SOVREN AI',
+      description: 'Sovereign intelligence platform. Stop renting AI, start owning your future.',
+      icon: <Brain className="w-12 h-12" />,
+      href: '/services/sovren-ai',
+      color: 'cyan'
+    },
+    {
+      title: 'AI Consulting',
+      description: 'Strategic AI implementation that transforms businesses into market leaders.',
+      icon: <Zap className="w-12 h-12" />,
+      href: '/services/ai-consulting',
+      color: 'purple'
+    },
+    {
+      title: 'Digital Transformation',
+      description: 'Complete business evolution. Not digitization—transcendence.',
+      icon: <Shield className="w-12 h-12" />,
+      href: '/services/digital-transformation',
+      color: 'pink'
+    },
+    {
+      title: 'Custom AI Development',
+      description: 'Bespoke AI solutions that give you an unfair competitive advantage.',
+      icon: <Code className="w-12 h-12" />,
+      href: '/services/custom-ai-development',
+      color: 'blue'
+    },
+    {
+      title: 'Innovation Lab',
+      description: 'R&D partnerships that put you years ahead of the competition.',
+      icon: <Beaker className="w-12 h-12" />,
+      href: '/services/innovation-lab',
+      color: 'green'
+    }
+  ];
+
+  return (
+    <ConsciousPage title="Revolutionary Services">
+      <div className="space-y-12">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent mb-4">
+            Services That Transcend
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            We don't provide services. We provide evolution. Choose your transformation.
+          </p>
+        </div>
+
+        <div className="grid gap-8">
+          {services.map((service, index) => (
+            <Link key={index} href={service.href} className="block group">
+              <div className={`bg-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-${service.color}-500/30 hover:border-${service.color}-500 transition-all`}>
+                <div className="flex items-start gap-4">
+                  <div className={`text-${service.color}-400 flex-shrink-0`}>
+                    {service.icon}
+                  </div>
+                  <div className="flex-1">
+                    <h3 className={`text-2xl font-bold text-white mb-3 group-hover:text-${service.color}-400 transition-colors`}>
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-300 mb-4">
+                      {service.description}
+                    </p>
+                    <span className={`inline-flex items-center text-${service.color}-400 font-medium`}>
+                      Explore {service.title} <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        <div className="text-center mt-12">
+          <Link href="/contact" className="inline-block px-8 py-4 bg-gradient-to-r from-cyan-600 to-purple-600 rounded-xl font-medium text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all">
+            Start Your Evolution Today
+          </Link>
+        </div>
+      </div>
+    </ConsciousPage>
+  );
+}
