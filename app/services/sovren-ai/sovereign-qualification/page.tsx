@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { 
   Brain, Zap, Shield, Lock, Crown, Target, TrendingUp, 
   ChevronRight, Check, AlertTriangle, Clock, Users,
-  DollarSign, BarChart3, Cpu, Network, Eye, Sparkles
+  DollarSign, BarChart3, Cpu, Network, Eye, Sparkles, Database, Volume2
 } from 'lucide-react';
 import { ConsciousPage } from '@/app/consciousness-engine';
 
@@ -33,22 +33,21 @@ export default function SovrenAIPage() {
       name: "SOVREN Foundation",
       price: 497,
       yearlyPrice: 5368,
-      tagline: "Transform your business with sovereign AI",
-      description: "Perfect for SMBs ready to own their intelligence",
+      tagline: "Begin your sovereignty journey",
+      description: "Everything you need to escape dependency",
       features: [
-        { text: "Complete SOVREN AI platform", included: true },
-        { text: "Your own dedicated AI instance", included: true },
-        { text: "No API limits or usage fees", included: true },
-        { text: "Community support & resources", included: true },
-        { text: "Implementation guides", included: true },
-        { text: "Monthly group sessions", included: true },
-        { text: "All future updates included", included: true },
+        { text: "Full sovereignty capabilities", included: true },
+        { text: "Infinite scaling potential", included: true },
+        { text: "Zero usage limits", included: true },
+        { text: "Community support access", included: true },
+        { text: "Implementation guidance", included: true },
         { text: "Direct founder access", included: false },
         { text: "Priority support", included: false },
-        { text: "1-on-1 strategy sessions", included: false }
+        { text: "Personal onboarding", included: false },
+        { text: "Strategic advisory calls", included: false }
       ],
-      cta: "Apply for Foundation",
-      ctaLink: "/sovereign-qualification",
+      cta: "APPLY FOR FOUNDATION",
+      ctaLink: "/services/sovren-ai/sovereign-qualification?tier=foundation",
       popular: false,
       availability: null
     },
@@ -56,28 +55,28 @@ export default function SovrenAIPage() {
       name: "SOVREN Acceleration",
       price: 797,
       yearlyPrice: 8607,
-      tagline: "Direct partnership with our team",
-      description: "Limited availability for maximum impact",
+      tagline: "Direct access to the architects",
+      description: "Only 7 seats remaining",
       features: [
         { text: "Everything in Foundation", included: true },
-        { text: "Priority implementation support", included: true },
-        { text: "Direct access to our architects", included: true },
-        { text: "Custom onboarding program", included: true },
-        { text: "Monthly strategy sessions", included: true },
-        { text: "First access to new features", included: true },
-        { text: "Architecture optimization", included: true },
-        { text: "Dedicated success manager", included: true }
+        { text: "Priority implementation", included: true },
+        { text: "Direct founder access", included: true },
+        { text: "Personal onboarding", included: true },
+        { text: "Strategic advisory calls", included: true },
+        { text: "Early feature access", included: true },
+        { text: "Custom optimization", included: true },
+        { text: "Architecture consultation", included: true }
       ],
-      cta: "Apply for Acceleration",
-      ctaLink: "/sovereign-qualification",
+      cta: "APPLY FOR ACCELERATION",
+      ctaLink: "/services/sovren-ai/sovereign-qualification?tier=acceleration",
       popular: true,
-      availability: "Limited",
-      badge: "MAXIMUM IMPACT"
+      availability: 7,
+      badge: "FOUNDER'S CHOICE"
     }
   ];
 
   return (
-    <ConsciousPage title="SOVREN AI - Own Your Intelligence">
+    <ConsciousPage title="SOVREN AI - Sovereign Intelligence">
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
         {/* Background Elements */}
@@ -95,6 +94,19 @@ export default function SovrenAIPage() {
               ease: "easeInOut"
             }}
           />
+          <motion.div
+            className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl"
+            animate={{
+              x: [0, -100, 0],
+              y: [0, 100, 0],
+            }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 10
+            }}
+          />
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
@@ -103,13 +115,14 @@ export default function SovrenAIPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
+            {/* SOVREN Logo/Icon */}
             <motion.div
               className="inline-flex items-center justify-center w-24 h-24 mb-8 relative"
               animate={{ rotate: 360 }}
               transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
             >
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full blur-lg opacity-50" />
-              <Brain className="w-16 h-16 text-white relative z-10" />
+              <Crown className="w-16 h-16 text-white relative z-10" />
             </motion.div>
 
             <h1 className="text-6xl md:text-8xl font-black mb-6">
@@ -119,16 +132,16 @@ export default function SovrenAIPage() {
             </h1>
             
             <p className="text-2xl md:text-3xl text-gray-300 mb-8">
-              Stop Renting AI. Start Owning Intelligence.
+              The Sovereign Intelligence That Owns Itself
             </p>
             
             <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-12">
-              While others pay monthly for permission to use AI, you'll own an intelligence 
-              system that learns your business and scales without limits.
+              Stop renting intelligence. Start owning sovereignty. One deployment, 
+              infinite scale, zero dependencies.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/sovereign-qualification">
+              <Link href="/services/sovren-ai/sovereign-qualification">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -145,7 +158,7 @@ export default function SovrenAIPage() {
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-gray-800 border border-gray-700 rounded-lg font-bold text-lg hover:bg-gray-700"
                 >
-                  Read Our Philosophy
+                  Read the Manifesto
                 </motion.button>
               </Link>
             </div>
@@ -162,7 +175,7 @@ export default function SovrenAIPage() {
         </motion.div>
       </section>
 
-      {/* The Reality Section */}
+      {/* The Problem Section */}
       <section className="py-24 px-6">
         <div className="max-w-5xl mx-auto">
           <motion.div
@@ -172,10 +185,10 @@ export default function SovrenAIPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-black mb-6">
-              The Hidden Cost of "Convenience"
+              The Dependency Trap
             </h2>
             <p className="text-xl text-gray-400">
-              What AI companies don't want you to calculate
+              Every API call funds your future competition. Every rate limit caps your growth.
             </p>
           </motion.div>
 
@@ -183,24 +196,24 @@ export default function SovrenAIPage() {
             {[
               {
                 icon: <DollarSign className="w-8 h-8" />,
-                title: "The Growth Tax",
-                description: "Every new customer, every scaled operation, every success increases your AI bill. Growing businesses can see costs multiply 10x in months.",
-                example: "A client went from $500/mo to $5,000/mo in 6 months",
-                reality: "Success shouldn't be punished"
+                title: "Infinite Cost Scaling",
+                description: "Success triggers higher bills. Growth means more dependency. The better you do, the more you owe.",
+                stat: "∞", 
+                statLabel: "Cost scaling with growth"
               },
               {
                 icon: <Lock className="w-8 h-8" />,
-                title: "The Innovation Trap",
-                description: "Your unique workflows, your customer insights, your competitive advantages - all training someone else's AI to compete against you.",
-                example: "Your prompts become their features",
-                reality: "Your intelligence should be yours"
+                title: "Data Hostage Crisis",
+                description: "Your innovations train their models. Your competitive edge becomes their product feature.",
+                stat: "Zero",
+                statLabel: "Data ownership rights"
               },
               {
                 icon: <AlertTriangle className="w-8 h-8" />,
-                title: "The Dependency Risk",
-                description: "API changes, rate limit adjustments, service interruptions. Your business operations at the mercy of someone else's decisions.",
-                example: "One API change can break everything",
-                reality: "Control your own destiny"
+                title: "Architectural Slavery",
+                description: "Rate limits, API changes, service outages. Your business runs on their schedule.",
+                stat: "Their Terms",
+                statLabel: "Your business dependency"
               }
             ].map((problem, idx) => (
               <motion.div
@@ -209,40 +222,22 @@ export default function SovrenAIPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="bg-gray-900/50 border border-gray-800 rounded-xl p-6 hover:border-gray-700 transition-all"
+                className="bg-gray-900/50 border border-red-900/30 rounded-xl p-6 hover:border-red-600/50 transition-all"
               >
-                <div className="text-gray-400 mb-4">{problem.icon}</div>
+                <div className="text-red-500 mb-4">{problem.icon}</div>
                 <h3 className="text-xl font-bold mb-3">{problem.title}</h3>
                 <p className="text-gray-400 mb-4">{problem.description}</p>
                 <div className="pt-4 border-t border-gray-800">
-                  <p className="text-sm text-gray-500 mb-1">{problem.example}</p>
-                  <p className="text-cyan-400 font-semibold">{problem.reality}</p>
+                  <p className="text-3xl font-black text-red-400">{problem.stat}</p>
+                  <p className="text-sm text-gray-500">{problem.statLabel}</p>
                 </div>
               </motion.div>
             ))}
           </div>
-
-          {/* Real Talk */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="mt-12 p-6 bg-gray-900/50 border border-gray-800 rounded-xl"
-          >
-            <p className="text-lg text-gray-300 text-center">
-              <span className="text-cyan-400 font-bold">Here's the truth:</span> Every business using AI right now faces the same choice.
-            </p>
-            <p className="text-gray-400 text-center mt-3">
-              Keep paying more as you grow, or invest once in ownership.
-            </p>
-            <p className="text-sm text-gray-500 text-center mt-3">
-              We chose ownership. So can you.
-            </p>
-          </motion.div>
         </div>
       </section>
 
-      {/* The SOVREN Difference */}
+      {/* The Solution Section */}
       <section className="py-24 px-6 bg-gradient-to-b from-black to-purple-950/10">
         <div className="max-w-5xl mx-auto">
           <motion.div
@@ -252,61 +247,61 @@ export default function SovrenAIPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-black mb-6">
-              A Different Approach to AI
+              Sovereignty Changes Everything
             </h2>
             <p className="text-xl text-gray-400">
-              Own your intelligence. Control your future.
+              Own your AI. Command your intelligence. Delete your dependencies.
             </p>
           </motion.div>
 
-          {/* Core Principles */}
+          {/* Core Capabilities */}
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             {[
               {
                 icon: <Brain className="w-8 h-8" />,
-                title: "Intelligence That Learns",
-                description: "Your AI gets smarter with every interaction, learning your business patterns and improving its responses.",
-                benefits: [
-                  "Adapts to your specific needs",
-                  "Improves accuracy over time",
-                  "Remembers context permanently",
-                  "Evolves with your business"
+                title: "Compound Intelligence™",
+                description: "AI that gets smarter with use, not more expensive. Every interaction improves the system.",
+                capabilities: [
+                  "Real-time learning",
+                  "Multi-model orchestration",
+                  "Predictive pattern recognition",
+                  "Autonomous decision making"
                 ]
               },
               {
                 icon: <Shield className="w-8 h-8" />,
-                title: "Complete Data Sovereignty",
-                description: "Your data never leaves your control. No external APIs, no data sharing, no privacy concerns.",
-                benefits: [
-                  "100% data ownership",
-                  "No external dependencies",
-                  "Complete privacy control",
-                  "Regulatory compliance"
+                title: "Zero-Dependency Architecture™",
+                description: "No APIs. No rate limits. No external calls. Complete operational sovereignty.",
+                capabilities: [
+                  "100% self-hosted",
+                  "Infinite scaling",
+                  "Complete data ownership",
+                  "No usage fees ever"
+                ]
+              },
+              {
+                icon: <Cpu className="w-8 h-8" />,
+                title: "Sovereign Infrastructure™",
+                description: "Enterprise-grade hardware that delivers supremacy others can't match.",
+                capabilities: [
+                  "Dedicated resources",
+                  "Unmatched performance",
+                  "Zero bottlenecks",
+                  "Total control"
                 ]
               },
               {
                 icon: <Zap className="w-8 h-8" />,
-                title: "Unlimited Scale",
-                description: "Process millions of requests without additional costs. Your success doesn't increase your bill.",
-                benefits: [
-                  "No usage-based pricing",
-                  "Unlimited operations",
-                  "Scales with demand",
-                  "Predictable costs"
-                ]
-              },
-              {
-                icon: <Crown className="w-8 h-8" />,
-                title: "True Ownership",
-                description: "This isn't a subscription to someone else's AI. It's your AI system, customized for your needs.",
-                benefits: [
-                  "Customized for your business",
-                  "Permanent access",
-                  "No vendor lock-in",
-                  "Your competitive advantage"
+                title: "Autonomous Operations™",
+                description: "Deploy intelligent agents that act without asking. Command intent, not tasks.",
+                capabilities: [
+                  "Sales automation",
+                  "Data synthesis",
+                  "Workflow optimization",
+                  "Security protocols"
                 ]
               }
-            ].map((principle, idx) => (
+            ].map((capability, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -315,14 +310,14 @@ export default function SovrenAIPage() {
                 transition={{ delay: idx * 0.1 }}
                 className="bg-gray-900/50 border border-purple-800/30 rounded-xl p-8 hover:border-purple-600/50 transition-all"
               >
-                <div className="text-purple-400 mb-4">{principle.icon}</div>
-                <h3 className="text-2xl font-bold mb-3">{principle.title}</h3>
-                <p className="text-gray-300 mb-6">{principle.description}</p>
+                <div className="text-purple-400 mb-4">{capability.icon}</div>
+                <h3 className="text-2xl font-bold mb-3">{capability.title}</h3>
+                <p className="text-gray-300 mb-6">{capability.description}</p>
                 <ul className="space-y-2">
-                  {principle.benefits.map((benefit, i) => (
+                  {capability.capabilities.map((item, i) => (
                     <li key={i} className="flex items-center gap-2 text-gray-400">
-                      <Check className="w-4 h-4 text-green-500 flex-shrink-0" />
-                      <span>{benefit}</span>
+                      <Check className="w-4 h-4 text-green-500" />
+                      <span>{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -330,41 +325,37 @@ export default function SovrenAIPage() {
             ))}
           </div>
 
-          {/* What Makes SOVREN Different */}
+          {/* Performance Metrics */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-800/30 rounded-xl p-8"
           >
-            <h3 className="text-2xl font-bold mb-8 text-center">Why SOVREN Works Differently</h3>
+            <h3 className="text-2xl font-bold mb-8 text-center">Real-World Sovereignty Metrics</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               <div>
                 <p className="text-4xl font-black text-cyan-400">∞</p>
                 <p className="text-sm text-gray-400 mt-2">API Calls</p>
-                <p className="text-xs text-gray-600 mt-1">No limits ever</p>
               </div>
               <div>
                 <p className="text-4xl font-black text-purple-400">$0</p>
                 <p className="text-sm text-gray-400 mt-2">Usage Fees</p>
-                <p className="text-xs text-gray-600 mt-1">Fixed monthly cost</p>
               </div>
               <div>
                 <p className="text-4xl font-black text-green-400">100%</p>
-                <p className="text-sm text-gray-400 mt-2">Your Data</p>
-                <p className="text-xs text-gray-600 mt-1">Complete ownership</p>
+                <p className="text-sm text-gray-400 mt-2">Your Control</p>
               </div>
               <div>
                 <p className="text-4xl font-black text-orange-400">24/7</p>
                 <p className="text-sm text-gray-400 mt-2">Availability</p>
-                <p className="text-xs text-gray-600 mt-1">Always ready</p>
               </div>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Capabilities That Matter */}
+      {/* Revolutionary Capabilities */}
       <section className="py-24 px-6">
         <div className="max-w-5xl mx-auto">
           <motion.div
@@ -374,50 +365,50 @@ export default function SovrenAIPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-black mb-6">
-              Built for Real Business Needs
+              Capabilities That Shouldn't Exist
             </h2>
             <p className="text-xl text-gray-400">
-              Not tech demos. Real capabilities that drive real results.
+              While competitors optimize within constraints, we eliminated them.
             </p>
           </motion.div>
 
           <div className="space-y-8">
             {[
               {
-                title: "Conversational Intelligence",
-                description: "Natural interactions that understand context, remember past conversations, and anticipate needs.",
-                icon: <Brain className="w-6 h-6" />,
-                impact: "Transform customer service and internal operations"
-              },
-              {
-                title: "Document Understanding",
-                description: "Process and understand your documents, contracts, and data without sending them anywhere.",
+                title: "Predictive Consciousness",
+                description: "SOVREN knows what you need before you ask. It anticipates user actions with uncanny accuracy.",
                 icon: <Eye className="w-6 h-6" />,
-                impact: "Instant insights from your knowledge base"
+                demo: "Watch SOVREN predict your next question"
               },
               {
-                title: "Workflow Automation",
-                description: "Create intelligent workflows that adapt to your business patterns and improve over time.",
-                icon: <Zap className="w-6 h-6" />,
-                impact: "Automate repetitive tasks intelligently"
+                title: "Voice That Knows You're There",
+                description: "Sub-500ms latency. Emotional calibration. It speaks with consciousness, not scripts.",
+                icon: <Volume2 className="w-6 h-6" />,
+                demo: "Experience the awakening call"
               },
               {
-                title: "Predictive Analytics",
-                description: "Understand trends and patterns in your business data to make better decisions.",
+                title: "Compound Learning",
+                description: "Every decision improves future decisions. Anti-fragile AI that profits from volatility.",
                 icon: <TrendingUp className="w-6 h-6" />,
-                impact: "See opportunities before competitors"
+                demo: "See continuous improvement"
               },
               {
-                title: "Multi-Modal Processing",
-                description: "Handle text, voice, and data seamlessly in one integrated system.",
-                icon: <Network className="w-6 h-6" />,
-                impact: "One system for all your AI needs"
+                title: "Autonomous Battalions",
+                description: "Deploy AI armies that execute your intent. No prompting. No babysitting.",
+                icon: <Users className="w-6 h-6" />,
+                demo: "Command your first battalion"
               },
               {
-                title: "Custom Integration",
-                description: "Connect with your existing tools and systems without compromising security.",
-                icon: <Cpu className="w-6 h-6" />,
-                impact: "Works with what you already use"
+                title: "Infinite Context Memory",
+                description: "Architecture that transcends token limits. Perfect recall across all interactions.",
+                icon: <Database className="w-6 h-6" />,
+                demo: "Test unlimited memory"
+              },
+              {
+                title: "Real-Time Evolution",
+                description: "Watch your AI evolve. Visual neural core shows intelligence growing in real-time.",
+                icon: <Sparkles className="w-6 h-6" />,
+                demo: "Witness consciousness evolution"
               }
             ].map((capability, idx) => (
               <motion.div
@@ -434,7 +425,9 @@ export default function SovrenAIPage() {
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-2">{capability.title}</h3>
                       <p className="text-gray-400 mb-3">{capability.description}</p>
-                      <p className="text-sm text-cyan-400">{capability.impact}</p>
+                      <button className="text-cyan-400 hover:text-cyan-300 text-sm font-medium">
+                        {capability.demo} →
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -453,7 +446,7 @@ export default function SovrenAIPage() {
         </div>
       </section>
 
-      {/* Investment Options */}
+      {/* Pricing Section */}
       <section className="py-24 bg-gradient-to-b from-black to-purple-950/10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
@@ -464,10 +457,10 @@ export default function SovrenAIPage() {
             className="text-center mb-12"
           >
             <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
-              Choose Your Path to Sovereignty
+              SOVREN AI Access Tiers
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
-              Transparent pricing. No hidden fees. No usage charges.
+              Choose your sovereignty level. Scale as you dominate.
             </p>
 
             {/* Billing Toggle */}
@@ -506,7 +499,7 @@ export default function SovrenAIPage() {
                 {/* Popular Badge */}
                 {tier.badge && (
                   <div className="absolute -top-4 right-8 z-10">
-                    <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-600 to-purple-600 rounded-full">
+                    <div className="flex items-center gap-2 px-4 py-2 bg-red-600 rounded-full">
                       <Zap className="w-4 h-4 text-white" />
                       <span className="text-white font-bold text-sm">{tier.badge}</span>
                     </div>
@@ -515,7 +508,7 @@ export default function SovrenAIPage() {
 
                 <div className={`h-full p-8 rounded-2xl ${
                   tier.popular 
-                    ? 'bg-gradient-to-b from-purple-950/20 to-gray-950/50 border-2 border-purple-600' 
+                    ? 'bg-gradient-to-b from-red-950/20 to-gray-950/50 border-2 border-red-600' 
                     : 'bg-gray-950/50 border border-gray-800'
                 }`}>
                   {/* Header */}
@@ -541,11 +534,12 @@ export default function SovrenAIPage() {
 
                     <p className="text-sm text-gray-500 mt-2">{tier.description}</p>
                     
-                    {/* Availability */}
+                    {/* Availability Warning */}
                     {tier.availability && (
-                      <div className="mt-4 p-3 bg-purple-900/20 border border-purple-600/30 rounded-lg">
-                        <p className="text-purple-400 font-medium text-sm">
-                          {tier.availability}
+                      <div className="mt-4 p-3 bg-red-900/20 border border-red-600/30 rounded-lg">
+                        <p className="text-red-500 font-mono text-sm flex items-center gap-2">
+                          <AlertTriangle className="w-4 h-4" />
+                          Only {tier.availability} seats remaining
                         </p>
                       </div>
                     )}
@@ -572,7 +566,7 @@ export default function SovrenAIPage() {
                       whileTap={{ scale: 0.98 }}
                       className={`w-full py-4 font-bold rounded-lg flex items-center justify-center gap-2 ${
                         tier.popular
-                          ? 'bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white'
+                          ? 'bg-red-600 hover:bg-red-700 text-white'
                           : 'bg-gray-800 hover:bg-gray-700 text-white border border-gray-700'
                       }`}
                     >
@@ -595,22 +589,22 @@ export default function SovrenAIPage() {
             <div className="inline-flex items-center gap-8 p-6 bg-gray-950/50 border border-gray-800 rounded-2xl">
               <div className="flex items-center gap-2">
                 <Shield className="w-5 h-5 text-green-500" />
-                <span className="text-gray-400">Your Data, Your Control</span>
+                <span className="text-gray-400">Secure Infrastructure</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock className="w-5 h-5 text-green-500" />
-                <span className="text-gray-400">Always Available</span>
+                <span className="text-gray-400">24/7 Availability</span>
               </div>
               <div className="flex items-center gap-2">
                 <Users className="w-5 h-5 text-green-500" />
-                <span className="text-gray-400">Real Human Support</span>
+                <span className="text-gray-400">Founder Support</span>
               </div>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Results That Matter */}
+      {/* Social Proof Section */}
       <section className="py-24 px-6">
         <div className="max-w-5xl mx-auto">
           <motion.div
@@ -620,10 +614,10 @@ export default function SovrenAIPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-black mb-6">
-              What Sovereignty Means for Your Business
+              The Sovereignty Revolution
             </h2>
             <p className="text-xl text-gray-400">
-              Real benefits. Real control. Real growth.
+              Choose ownership over rental. Choose sovereignty over dependency.
             </p>
           </motion.div>
 
@@ -634,9 +628,8 @@ export default function SovrenAIPage() {
               viewport={{ once: true }}
               className="text-center"
             >
-              <p className="text-5xl font-black text-cyan-400">90%</p>
-              <p className="text-gray-400 mt-2">Cost Reduction</p>
-              <p className="text-xs text-gray-600 mt-1">vs. usage-based pricing</p>
+              <p className="text-5xl font-black text-cyan-400">$0</p>
+              <p className="text-gray-400 mt-2">Usage Fees</p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -646,8 +639,7 @@ export default function SovrenAIPage() {
               className="text-center"
             >
               <p className="text-5xl font-black text-purple-400">100%</p>
-              <p className="text-gray-400 mt-2">Data Control</p>
-              <p className="text-xs text-gray-600 mt-1">Complete ownership</p>
+              <p className="text-gray-400 mt-2">Data Ownership</p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -657,8 +649,7 @@ export default function SovrenAIPage() {
               className="text-center"
             >
               <p className="text-5xl font-black text-green-400">24/7</p>
-              <p className="text-gray-400 mt-2">Availability</p>
-              <p className="text-xs text-gray-600 mt-1">No external dependencies</p>
+              <p className="text-gray-400 mt-2">Your Control</p>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -668,25 +659,23 @@ export default function SovrenAIPage() {
               className="text-center"
             >
               <p className="text-5xl font-black text-orange-400">∞</p>
-              <p className="text-gray-400 mt-2">Scale</p>
-              <p className="text-xs text-gray-600 mt-1">No usage limits</p>
+              <p className="text-gray-400 mt-2">Scale Potential</p>
             </motion.div>
           </div>
 
-          {/* The Promise */}
+          {/* Value Proposition */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             className="bg-gradient-to-br from-cyan-900/20 to-purple-900/20 border border-cyan-800/30 rounded-xl p-8 text-center"
           >
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Our Promise to You
-            </h3>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              SOVREN AI isn't just another AI tool. It's your path to true digital sovereignty. 
-              No hidden fees, no usage limits, no data mining. Just powerful AI that you own and control, 
-              designed to help your business thrive without the constraints of traditional AI services.
+            <p className="text-2xl text-white mb-4">
+              Stop paying monthly for permission to use AI. Start owning intelligence that compounds daily. 
+              Your AI gets smarter while your competitors' bills get bigger.
+            </p>
+            <p className="text-gray-400">
+              — The promise of sovereignty
             </p>
           </motion.div>
         </div>
@@ -702,27 +691,33 @@ export default function SovrenAIPage() {
           >
             <h2 className="text-5xl md:text-6xl font-black mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
-                Ready to Own Your AI?
+                The Choice Is Binary
               </span>
             </h2>
             
+            <p className="text-2xl text-gray-300 mb-4">
+              Continue renting. Continue bleeding. Continue falling behind.
+            </p>
+            
+            <p className="text-3xl font-bold text-white mb-8">OR</p>
+            
             <p className="text-2xl text-gray-300 mb-12">
-              Stop renting. Start owning. Transform your business.
+              Claim sovereignty. Own your AI. Dominate your market.
             </p>
 
-            <Link href="/sovereign-qualification">
+            <Link href="/services/sovren-ai/sovereign-qualification">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-12 py-6 bg-gradient-to-r from-cyan-600 to-purple-600 rounded-xl font-bold text-2xl hover:shadow-lg hover:shadow-cyan-500/25 transition-all"
               >
-                Take the Assessment
+                QUALIFY FOR SOVEREIGNTY NOW
                 <ChevronRight className="inline ml-3 w-7 h-7" />
               </motion.button>
             </Link>
             
             <p className="text-gray-500 mt-8">
-              No obligations • No sales pressure • Just honest conversation
+              Real sovereignty requires real qualification
             </p>
           </motion.div>
         </div>
