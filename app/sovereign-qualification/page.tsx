@@ -30,7 +30,7 @@ export default function SovrenAIPage() {
 
   const pricingTiers = [
     {
-      name: "SOVREN Foundation",
+      name: "Sovren Proof",
       price: 497,
       yearlyPrice: 5368,
       tagline: "Begin your sovereignty journey",
@@ -46,19 +46,19 @@ export default function SovrenAIPage() {
         { text: "Personal onboarding", included: false },
         { text: "Strategic advisory calls", included: false }
       ],
-      cta: "APPLY FOR FOUNDATION",
-      ctaLink: "/services/sovren-ai/sovereign-qualification?tier=foundation",
+      cta: "APPLY FOR PROOF",
+      ctaLink: "/services/sovren-ai/sovereign-qualification?tier=proof",
       popular: false,
       availability: null
     },
     {
-      name: "SOVREN Acceleration",
+      name: "Sovren Proof+",
       price: 797,
       yearlyPrice: 8607,
       tagline: "Direct access to the architects",
       description: "Only 7 seats remaining",
       features: [
-        { text: "Everything in Foundation", included: true },
+        { text: "Everything in Proof", included: true },
         { text: "Priority implementation", included: true },
         { text: "Direct founder access", included: true },
         { text: "Personal onboarding", included: true },
@@ -67,8 +67,8 @@ export default function SovrenAIPage() {
         { text: "Custom optimization", included: true },
         { text: "Architecture consultation", included: true }
       ],
-      cta: "APPLY FOR ACCELERATION",
-      ctaLink: "/services/sovren-ai/sovereign-qualification?tier=acceleration",
+      cta: "APPLY FOR PROOF+",
+      ctaLink: "/services/sovren-ai/sovereign-qualification?tier=proof-plus",
       popular: true,
       availability: 7,
       badge: "FOUNDER'S CHOICE"
